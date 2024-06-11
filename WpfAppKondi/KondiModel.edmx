@@ -1,0 +1,476 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="kondiModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="ClimateTechTypes">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Name" Type="nvarchar" MaxLength="100" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Comments">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Message" Type="nvarchar" MaxLength="500" Nullable="false" />
+          <Property Name="MasterID" Type="bigint" Nullable="false" />
+          <Property Name="RequestID" Type="bigint" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Requests">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="StartDate" Type="date" Nullable="false" />
+          <Property Name="ClimateTechTypeId" Type="bigint" Nullable="false" />
+          <Property Name="ClimateTechModel" Type="nvarchar" MaxLength="200" Nullable="false" />
+          <Property Name="ProblemDescryption" Type="nvarchar" MaxLength="500" Nullable="false" />
+          <Property Name="RequestStatusId" Type="bigint" Nullable="false" />
+          <Property Name="CompletionDate" Type="date" />
+          <Property Name="RepairParts" Type="nvarchar" MaxLength="1000" />
+          <Property Name="MasterId" Type="bigint" />
+          <Property Name="ClientId" Type="bigint" Nullable="false" />
+        </EntityType>
+        <EntityType Name="RequestStatuses">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Name" Type="nvarchar" MaxLength="100" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Users">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="FirstName" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="LastName" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="ThirdName" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="PhoneNumber" Type="nvarchar" MaxLength="20" Nullable="false" />
+          <Property Name="Login" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="Password" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="UserTypeId" Type="bigint" Nullable="false" />
+        </EntityType>
+        <EntityType Name="UserTypes">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Name" Type="nvarchar" MaxLength="50" Nullable="false" />
+        </EntityType>
+        <Association Name="FK_Comments_Requests">
+          <End Role="Requests" Type="Self.Requests" Multiplicity="1" />
+          <End Role="Comments" Type="Self.Comments" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Requests">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="Comments">
+              <PropertyRef Name="RequestID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Comments_Users">
+          <End Role="Users" Type="Self.Users" Multiplicity="1" />
+          <End Role="Comments" Type="Self.Comments" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Users">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="Comments">
+              <PropertyRef Name="MasterID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Requests_ClimateTechTypes">
+          <End Role="ClimateTechTypes" Type="Self.ClimateTechTypes" Multiplicity="1" />
+          <End Role="Requests" Type="Self.Requests" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="ClimateTechTypes">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="Requests">
+              <PropertyRef Name="ClimateTechTypeId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Requests_RequestStatuses">
+          <End Role="RequestStatuses" Type="Self.RequestStatuses" Multiplicity="1" />
+          <End Role="Requests" Type="Self.Requests" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="RequestStatuses">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="Requests">
+              <PropertyRef Name="RequestStatusId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Requests_Users">
+          <End Role="Users" Type="Self.Users" Multiplicity="0..1" />
+          <End Role="Requests" Type="Self.Requests" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Users">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="Requests">
+              <PropertyRef Name="MasterId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Requests_Users1">
+          <End Role="Users" Type="Self.Users" Multiplicity="1" />
+          <End Role="Requests" Type="Self.Requests" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Users">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="Requests">
+              <PropertyRef Name="ClientId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Users_UserTypes">
+          <End Role="UserTypes" Type="Self.UserTypes" Multiplicity="1" />
+          <End Role="Users" Type="Self.Users" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="UserTypes">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="Users">
+              <PropertyRef Name="UserTypeId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="kondiModelStoreContainer">
+          <EntitySet Name="ClimateTechTypes" EntityType="Self.ClimateTechTypes" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Comments" EntityType="Self.Comments" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Requests" EntityType="Self.Requests" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="RequestStatuses" EntityType="Self.RequestStatuses" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Users" EntityType="Self.Users" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="UserTypes" EntityType="Self.UserTypes" Schema="dbo" store:Type="Tables" />
+          <AssociationSet Name="FK_Comments_Requests" Association="Self.FK_Comments_Requests">
+            <End Role="Requests" EntitySet="Requests" />
+            <End Role="Comments" EntitySet="Comments" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Comments_Users" Association="Self.FK_Comments_Users">
+            <End Role="Users" EntitySet="Users" />
+            <End Role="Comments" EntitySet="Comments" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Requests_ClimateTechTypes" Association="Self.FK_Requests_ClimateTechTypes">
+            <End Role="ClimateTechTypes" EntitySet="ClimateTechTypes" />
+            <End Role="Requests" EntitySet="Requests" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Requests_RequestStatuses" Association="Self.FK_Requests_RequestStatuses">
+            <End Role="RequestStatuses" EntitySet="RequestStatuses" />
+            <End Role="Requests" EntitySet="Requests" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Requests_Users" Association="Self.FK_Requests_Users">
+            <End Role="Users" EntitySet="Users" />
+            <End Role="Requests" EntitySet="Requests" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Requests_Users1" Association="Self.FK_Requests_Users1">
+            <End Role="Users" EntitySet="Users" />
+            <End Role="Requests" EntitySet="Requests" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Users_UserTypes" Association="Self.FK_Users_UserTypes">
+            <End Role="UserTypes" EntitySet="UserTypes" />
+            <End Role="Users" EntitySet="Users" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="kondiModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="ClimateTechType">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Name" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
+          <NavigationProperty Name="Requests" Relationship="Self.FK_Requests_ClimateTechTypes" FromRole="ClimateTechTypes" ToRole="Requests" />
+        </EntityType>
+        <EntityType Name="Comment">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Message" Type="String" MaxLength="500" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="MasterID" Type="Int64" Nullable="false" />
+          <Property Name="RequestID" Type="Int64" Nullable="false" />
+          <NavigationProperty Name="Request" Relationship="Self.FK_Comments_Requests" FromRole="Comments" ToRole="Requests" />
+          <NavigationProperty Name="Master" Relationship="Self.FK_Comments_Users" FromRole="Comments" ToRole="Users" />
+        </EntityType>
+        <EntityType Name="Request">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="StartDate" Type="DateTime" Nullable="false" Precision="0" />
+          <Property Name="ClimateTechTypeId" Type="Int64" Nullable="false" />
+          <Property Name="ClimateTechModel" Type="String" MaxLength="200" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="ProblemDescryption" Type="String" MaxLength="500" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="RequestStatusId" Type="Int64" Nullable="false" />
+          <Property Name="CompletionDate" Type="DateTime" Precision="0" />
+          <Property Name="RepairParts" Type="String" MaxLength="1000" FixedLength="false" Unicode="true" />
+          <Property Name="MasterId" Type="Int64" />
+          <Property Name="ClientId" Type="Int64" Nullable="false" />
+          <NavigationProperty Name="ClimateTechType" Relationship="Self.FK_Requests_ClimateTechTypes" FromRole="Requests" ToRole="ClimateTechTypes" />
+          <NavigationProperty Name="Comments" Relationship="Self.FK_Comments_Requests" FromRole="Requests" ToRole="Comments" />
+          <NavigationProperty Name="RequestStatus" Relationship="Self.FK_Requests_RequestStatuses" FromRole="Requests" ToRole="RequestStatuses" />
+          <NavigationProperty Name="Master" Relationship="Self.FK_Requests_Users" FromRole="Requests" ToRole="Users" />
+          <NavigationProperty Name="Client" Relationship="Self.FK_Requests_Users1" FromRole="Requests" ToRole="Users" />
+        </EntityType>
+        <EntityType Name="RequestStatus">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Name" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
+          <NavigationProperty Name="Requests" Relationship="Self.FK_Requests_RequestStatuses" FromRole="RequestStatuses" ToRole="Requests" />
+        </EntityType>
+        <EntityType Name="User">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="FirstName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="LastName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="ThirdName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="PhoneNumber" Type="String" MaxLength="20" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Login" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Password" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="UserTypeId" Type="Int64" Nullable="false" />
+          <NavigationProperty Name="Comments" Relationship="Self.FK_Comments_Users" FromRole="Users" ToRole="Comments" />
+          <NavigationProperty Name="Masters" Relationship="Self.FK_Requests_Users" FromRole="Users" ToRole="Requests" />
+          <NavigationProperty Name="Clients" Relationship="Self.FK_Requests_Users1" FromRole="Users" ToRole="Requests" />
+          <NavigationProperty Name="UserType" Relationship="Self.FK_Users_UserTypes" FromRole="Users" ToRole="UserTypes" />
+        </EntityType>
+        <EntityType Name="UserType">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <NavigationProperty Name="Users" Relationship="Self.FK_Users_UserTypes" FromRole="UserTypes" ToRole="Users" />
+        </EntityType>
+        <Association Name="FK_Requests_ClimateTechTypes">
+          <End Role="ClimateTechTypes" Type="Self.ClimateTechType" Multiplicity="1" />
+          <End Role="Requests" Type="Self.Request" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="ClimateTechTypes">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="Requests">
+              <PropertyRef Name="ClimateTechTypeId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Comments_Requests">
+          <End Role="Requests" Type="Self.Request" Multiplicity="1" />
+          <End Role="Comments" Type="Self.Comment" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Requests">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="Comments">
+              <PropertyRef Name="RequestID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Comments_Users">
+          <End Role="Users" Type="Self.User" Multiplicity="1" />
+          <End Role="Comments" Type="Self.Comment" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Users">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="Comments">
+              <PropertyRef Name="MasterID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Requests_RequestStatuses">
+          <End Role="RequestStatuses" Type="Self.RequestStatus" Multiplicity="1" />
+          <End Role="Requests" Type="Self.Request" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="RequestStatuses">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="Requests">
+              <PropertyRef Name="RequestStatusId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Requests_Users">
+          <End Role="Users" Type="Self.User" Multiplicity="0..1" />
+          <End Role="Requests" Type="Self.Request" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Users">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="Requests">
+              <PropertyRef Name="MasterId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Requests_Users1">
+          <End Role="Users" Type="Self.User" Multiplicity="1" />
+          <End Role="Requests" Type="Self.Request" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Users">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="Requests">
+              <PropertyRef Name="ClientId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Users_UserTypes">
+          <End Role="UserTypes" Type="Self.UserType" Multiplicity="1" />
+          <End Role="Users" Type="Self.User" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="UserTypes">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="Users">
+              <PropertyRef Name="UserTypeId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="kondiEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="ClimateTechTypes" EntityType="Self.ClimateTechType" />
+          <EntitySet Name="Comments" EntityType="Self.Comment" />
+          <EntitySet Name="Requests" EntityType="Self.Request" />
+          <EntitySet Name="RequestStatuses" EntityType="Self.RequestStatus" />
+          <EntitySet Name="Users" EntityType="Self.User" />
+          <EntitySet Name="UserTypes" EntityType="Self.UserType" />
+          <AssociationSet Name="FK_Requests_ClimateTechTypes" Association="Self.FK_Requests_ClimateTechTypes">
+            <End Role="ClimateTechTypes" EntitySet="ClimateTechTypes" />
+            <End Role="Requests" EntitySet="Requests" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Comments_Requests" Association="Self.FK_Comments_Requests">
+            <End Role="Requests" EntitySet="Requests" />
+            <End Role="Comments" EntitySet="Comments" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Comments_Users" Association="Self.FK_Comments_Users">
+            <End Role="Users" EntitySet="Users" />
+            <End Role="Comments" EntitySet="Comments" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Requests_RequestStatuses" Association="Self.FK_Requests_RequestStatuses">
+            <End Role="RequestStatuses" EntitySet="RequestStatuses" />
+            <End Role="Requests" EntitySet="Requests" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Requests_Users" Association="Self.FK_Requests_Users">
+            <End Role="Users" EntitySet="Users" />
+            <End Role="Requests" EntitySet="Requests" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Requests_Users1" Association="Self.FK_Requests_Users1">
+            <End Role="Users" EntitySet="Users" />
+            <End Role="Requests" EntitySet="Requests" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Users_UserTypes" Association="Self.FK_Users_UserTypes">
+            <End Role="UserTypes" EntitySet="UserTypes" />
+            <End Role="Users" EntitySet="Users" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="kondiModelStoreContainer" CdmEntityContainer="kondiEntities">
+          <EntitySetMapping Name="ClimateTechTypes">
+            <EntityTypeMapping TypeName="kondiModel.ClimateTechType">
+              <MappingFragment StoreEntitySet="ClimateTechTypes">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Comments">
+            <EntityTypeMapping TypeName="kondiModel.Comment">
+              <MappingFragment StoreEntitySet="Comments">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="Message" ColumnName="Message" />
+                <ScalarProperty Name="MasterID" ColumnName="MasterID" />
+                <ScalarProperty Name="RequestID" ColumnName="RequestID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Requests">
+            <EntityTypeMapping TypeName="kondiModel.Request">
+              <MappingFragment StoreEntitySet="Requests">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="StartDate" ColumnName="StartDate" />
+                <ScalarProperty Name="ClimateTechTypeId" ColumnName="ClimateTechTypeId" />
+                <ScalarProperty Name="ClimateTechModel" ColumnName="ClimateTechModel" />
+                <ScalarProperty Name="ProblemDescryption" ColumnName="ProblemDescryption" />
+                <ScalarProperty Name="RequestStatusId" ColumnName="RequestStatusId" />
+                <ScalarProperty Name="CompletionDate" ColumnName="CompletionDate" />
+                <ScalarProperty Name="RepairParts" ColumnName="RepairParts" />
+                <ScalarProperty Name="MasterId" ColumnName="MasterId" />
+                <ScalarProperty Name="ClientId" ColumnName="ClientId" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="RequestStatuses">
+            <EntityTypeMapping TypeName="kondiModel.RequestStatus">
+              <MappingFragment StoreEntitySet="RequestStatuses">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Users">
+            <EntityTypeMapping TypeName="kondiModel.User">
+              <MappingFragment StoreEntitySet="Users">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="FirstName" ColumnName="FirstName" />
+                <ScalarProperty Name="LastName" ColumnName="LastName" />
+                <ScalarProperty Name="ThirdName" ColumnName="ThirdName" />
+                <ScalarProperty Name="PhoneNumber" ColumnName="PhoneNumber" />
+                <ScalarProperty Name="Login" ColumnName="Login" />
+                <ScalarProperty Name="Password" ColumnName="Password" />
+                <ScalarProperty Name="UserTypeId" ColumnName="UserTypeId" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="UserTypes">
+            <EntityTypeMapping TypeName="kondiModel.UserType">
+              <MappingFragment StoreEntitySet="UserTypes">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="true" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

@@ -23,6 +23,12 @@ namespace WpfAppKondi
         public MainWindow()
         {
             InitializeComponent();
+
+            KondiEntities db = new KondiEntities();
+
+            List<Request> requests = db.Requests.ToList();
+
+            int a = 5;
         }
     }
 }
