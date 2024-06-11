@@ -7,7 +7,7 @@
       "RelativeMoniker": "D:0:0:{9929C574-B68B-47F1-981E-803FB90EF6DF}|WpfAppKondi\\WpfAppKondi.csproj|solutionrelative:wpfappkondi\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{9929C574-B68B-47F1-981E-803FB90EF6DF}|WpfAppKondi\\WpfAppKondi.csproj|c:\\users\\smyslov\\source\\repos\\wpfappkondi\\wpfappkondi\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{9929C574-B68B-47F1-981E-803FB90EF6DF}|WpfAppKondi\\WpfAppKondi.csproj|C:\\Users\\smyslov\\source\\repos\\WpfAppKondi\\wpfappkondi\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{9929C574-B68B-47F1-981E-803FB90EF6DF}|WpfAppKondi\\WpfAppKondi.csproj|solutionrelative:wpfappkondi\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
@@ -18,8 +18,12 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 1,
           "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{cce594b6-0c39-4442-ba28-10c64ac7e89f}"
+            },
             {
               "$type": "Document",
               "DocumentIndex": 0,
@@ -42,12 +46,7 @@
               "RelativeToolTip": "WpfAppKondi\\MainWindow.xaml.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-11T12:53:19.635Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{cce594b6-0c39-4442-ba28-10c64ac7e89f}"
+              "WhenOpened": "2024-06-11T12:53:19.635Z"
             }
           ]
         }
