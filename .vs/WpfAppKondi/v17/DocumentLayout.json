@@ -3,8 +3,8 @@
   "WorkspaceRootPath": "C:\\Users\\smyslov\\source\\repos\\WpfAppKondi\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{9929C574-B68B-47F1-981E-803FB90EF6DF}|WpfAppKondi\\WpfAppKondi.csproj|c:\\users\\smyslov\\source\\repos\\wpfappkondi\\wpfappkondi\\pages\\customermainpage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{9929C574-B68B-47F1-981E-803FB90EF6DF}|WpfAppKondi\\WpfAppKondi.csproj|solutionrelative:wpfappkondi\\pages\\customermainpage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+      "AbsoluteMoniker": "D:0:0:{9929C574-B68B-47F1-981E-803FB90EF6DF}|WpfAppKondi\\WpfAppKondi.csproj|c:\\users\\smyslov\\source\\repos\\wpfappkondi\\wpfappkondi\\pages\\authorizepage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9929C574-B68B-47F1-981E-803FB90EF6DF}|WpfAppKondi\\WpfAppKondi.csproj|solutionrelative:wpfappkondi\\pages\\authorizepage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -19,13 +19,14 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "CustomerMainPage.xaml",
-              "DocumentMoniker": "C:\\Users\\smyslov\\source\\repos\\WpfAppKondi\\WpfAppKondi\\Pages\\CustomerMainPage.xaml",
-              "RelativeDocumentMoniker": "WpfAppKondi\\Pages\\CustomerMainPage.xaml",
-              "ToolTip": "C:\\Users\\smyslov\\source\\repos\\WpfAppKondi\\WpfAppKondi\\Pages\\CustomerMainPage.xaml",
-              "RelativeToolTip": "WpfAppKondi\\Pages\\CustomerMainPage.xaml",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2024-06-13T14:05:02.178Z",
+              "Title": "AuthorizePage.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\smyslov\\source\\repos\\WpfAppKondi\\WpfAppKondi\\Pages\\AuthorizePage.xaml.cs",
+              "RelativeDocumentMoniker": "WpfAppKondi\\Pages\\AuthorizePage.xaml.cs",
+              "ToolTip": "C:\\Users\\smyslov\\source\\repos\\WpfAppKondi\\WpfAppKondi\\Pages\\AuthorizePage.xaml.cs",
+              "RelativeToolTip": "WpfAppKondi\\Pages\\AuthorizePage.xaml.cs",
+              "ViewState": "AQIAACYAAAAA//////8TwDQAAAAEAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-13T14:48:31.736Z",
               "EditorCaption": ""
             }
           ]

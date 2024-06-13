@@ -12,6 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using WpfAppKondi.Model;
 
 namespace WpfAppKondi.Pages
 {
@@ -23,6 +24,13 @@ namespace WpfAppKondi.Pages
         public CustomerMainPage()
         {
             InitializeComponent();
+
+            this.GridCustomerRequests.ItemsSource = DbConnector.KondiEntities.Requests.Where(r => r.ClientId == GlobalVariables.User.Id).ToList();
+        }
+
+        private void ButtonAddNewRequest_Click(object sender, RoutedEventArgs e)
+        {
+
         }
     }
 }

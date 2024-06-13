@@ -71,7 +71,7 @@
     <Compile Include="Model\Comment.cs">
       <DependentUpon>KondiModel.tt</DependentUpon>
     </Compile>
-    <Compile Include="Model\DbConnection.cs" />
+    <Compile Include="Model\DbConnector.cs" />
     <Compile Include="Model\KondiModel.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>

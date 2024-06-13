@@ -33,21 +33,24 @@ namespace WpfAppKondi.Pages
 
             if (login == "")
             {
-                MessageBox.Show("Ошибка. Логин не заполнен.");
+                //MessageBox.Show(  "Ошибка. Логин не заполнен.");
+                MessageBox.Show("Ошибка. Логин не заполнен.", "Ошибка", MessageBoxButton.OK, MessageBoxImage.Error);
                 return;
             }
 
             if (password == "")
             {
-                MessageBox.Show("Ошибка. Пароль не заполнен.");
+       
+                MessageBox.Show("Ошибка. Пароль не заполнен.", "Ошибка", MessageBoxButton.OK, MessageBoxImage.Error);
                 return;
             }
 
-            User user = DbConnection.KondiEntities.Users.FirstOrDefault(u=>u.Login == login && u.Password == password);
+            User user = DbConnector.KondiEntities.Users.FirstOrDefault(u=>u.Login == login && u.Password == password);
 
             if (user == null)
             {
-                MessageBox.Show("Ошибка. Пользователь с такоей парой логин и пароль не найден");
+                MessageBox.Show("Ошибка. Пользователь с такоей парой логин и пароль не найден.", "Ошибка", MessageBoxButton.OK, MessageBoxImage.Error);
+    
                 return;
             }
 

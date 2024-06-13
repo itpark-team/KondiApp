@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace WpfAppKondi.Model
 {
-    internal class DbConnection
+    internal class DbConnector
     {
         public static kondiEntities KondiEntities { get; } = new kondiEntities();
     }
