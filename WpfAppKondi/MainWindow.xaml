@@ -5,8 +5,21 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WpfAppKondi"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="Kondi" Height="450" Width="800">
     <Grid>
-        
+        <Grid.RowDefinitions>
+            <RowDefinition Height="30*"/>
+            <RowDefinition Height="70*"/>
+        </Grid.RowDefinitions>
+        <StackPanel HorizontalAlignment="Stretch" Margin="0" VerticalAlignment="Stretch" Background="LightGray"></StackPanel>
+        <StackPanel HorizontalAlignment="Left" Orientation="Horizontal">
+            <Image Source="\Resources\logo.jpg"></Image>
+            <TextBlock FontSize="30" Text="{Binding ElementName=Frame, Path=Content.Title}"></TextBlock>
+        </StackPanel>
+        <StackPanel HorizontalAlignment="Right">
+            <Button Name="ButtonBack" Width="70" Height="30" Click="ButtonBack_Click">Назад</Button>
+            <Button Name="ButtonExit" Width="70" Height="30" Click="ButtonExit_Click">Выход</Button>
+        </StackPanel>
+        <Frame Grid.Row="1" Name="Frame" NavigationUIVisibility="Hidden" ContentRendered="Frame_ContentRendered"></Frame>
     </Grid>
 </Window>

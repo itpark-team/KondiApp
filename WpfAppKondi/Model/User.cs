@@ -7,7 +7,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace WpfAppKondi
+namespace WpfAppKondi.Model
 {
     using System;
     using System.Collections.Generic;

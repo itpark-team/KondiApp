@@ -64,27 +64,29 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
-    <Compile Include="ClimateTechType.cs">
+    <Compile Include="GlobalVariables.cs" />
+    <Compile Include="Model\ClimateTechType.cs">
       <DependentUpon>KondiModel.tt</DependentUpon>
     </Compile>
-    <Compile Include="Comment.cs">
+    <Compile Include="Model\Comment.cs">
       <DependentUpon>KondiModel.tt</DependentUpon>
     </Compile>
-    <Compile Include="KondiModel.cs">
+    <Compile Include="Model\DbConnection.cs" />
+    <Compile Include="Model\KondiModel.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>KondiModel.tt</DependentUpon>
     </Compile>
-    <Compile Include="Request.cs">
+    <Compile Include="Model\Request.cs">
       <DependentUpon>KondiModel.tt</DependentUpon>
     </Compile>
-    <Compile Include="RequestStatus.cs">
+    <Compile Include="Model\RequestStatus.cs">
       <DependentUpon>KondiModel.tt</DependentUpon>
     </Compile>
-    <Compile Include="User.cs">
+    <Compile Include="Model\User.cs">
       <DependentUpon>KondiModel.tt</DependentUpon>
     </Compile>
-    <Compile Include="UserType.cs">
+    <Compile Include="Model\UserType.cs">
       <DependentUpon>KondiModel.tt</DependentUpon>
     </Compile>
     <Page Include="MainWindow.xaml">
@@ -95,12 +97,12 @@
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="KondiModel.Context.cs">
+    <Compile Include="Model\KondiModel.Context.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>KondiModel.Context.tt</DependentUpon>
     </Compile>
-    <Compile Include="KondiModel.Designer.cs">
+    <Compile Include="Model\KondiModel.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>KondiModel.edmx</DependentUpon>
@@ -109,8 +111,36 @@
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Page Include="Pages\AuthorizePage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\CustomerMainPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\OperatorMainPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\SpecialistMainPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Pages\AuthorizePage.xaml.cs">
+      <DependentUpon>AuthorizePage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\CustomerMainPage.xaml.cs">
+      <DependentUpon>CustomerMainPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\OperatorMainPage.xaml.cs">
+      <DependentUpon>OperatorMainPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\SpecialistMainPage.xaml.cs">
+      <DependentUpon>SpecialistMainPage.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -128,11 +158,11 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <EntityDeploy Include="KondiModel.edmx">
+    <EntityDeploy Include="Model\KondiModel.edmx">
       <Generator>EntityModelCodeGenerator</Generator>
       <LastGenOutput>KondiModel.Designer.cs</LastGenOutput>
     </EntityDeploy>
-    <None Include="KondiModel.edmx.diagram">
+    <None Include="Model\KondiModel.edmx.diagram">
       <DependentUpon>KondiModel.edmx</DependentUpon>
     </None>
     <None Include="packages.config" />
@@ -145,19 +175,21 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="KondiModel.Context.tt">
+    <Content Include="Model\KondiModel.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
       <LastGenOutput>KondiModel.Context.cs</LastGenOutput>
       <DependentUpon>KondiModel.edmx</DependentUpon>
     </Content>
-    <Content Include="KondiModel.tt">
+    <Content Include="Model\KondiModel.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
       <DependentUpon>KondiModel.edmx</DependentUpon>
       <LastGenOutput>KondiModel.cs</LastGenOutput>
     </Content>
+    <Resource Include="Resources\logo.jpg" />
   </ItemGroup>
   <ItemGroup>
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

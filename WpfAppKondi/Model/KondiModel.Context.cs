@@ -7,16 +7,16 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace WpfAppKondi
+namespace WpfAppKondi.Model
 {
     using System;
     using System.Data.Entity;
     using System.Data.Entity.Infrastructure;
     
-    public partial class KondiEntities : DbContext
+    public partial class kondiEntities : DbContext
     {
-        public KondiEntities()
-            : base("name=KondiEntities")
+        public kondiEntities()
+            : base("name=kondiEntities")
         {
         }
     

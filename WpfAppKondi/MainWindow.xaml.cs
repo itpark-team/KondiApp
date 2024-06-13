@@ -12,6 +12,8 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using WpfAppKondi.Model;
+using WpfAppKondi.Pages;
 
 namespace WpfAppKondi
 {
@@ -24,11 +26,30 @@ namespace WpfAppKondi
         {
             InitializeComponent();
 
-            KondiEntities db = new KondiEntities();
+            GlobalVariables.Frame = this.Frame;
+            GlobalVariables.Frame.Navigate(new AuthorizePage());
+        }
 
-            List<Request> requests = db.Requests.ToList();
+        private void ButtonBack_Click(object sender, RoutedEventArgs e)
+        {
+            this.Frame.GoBack();
+        }
 
-            int a = 5;
+        private void ButtonExit_Click(object sender, RoutedEventArgs e)
+        {
+            this.Close();
+        }
+
+        private void Frame_ContentRendered(object sender, EventArgs e)
+        {
+            if (Frame.CanGoBack)
+            {
+                ButtonBack.Visibility = Visibility.Visible;
+            }
+            else
+            {
+                ButtonBack.Visibility = Visibility.Collapsed;
+            }
         }
     }
 }

@@ -7,23 +7,19 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace WpfAppKondi
+namespace WpfAppKondi.Model
 {
     using System;
     using System.Collections.Generic;
     
-    public partial class RequestStatus
+    public partial class Comment
     {
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
-        public RequestStatus()
-        {
-            this.Requests = new HashSet<Request>();
-        }
-    
         public long Id { get; set; }
-        public string Name { get; set; }
+        public string Message { get; set; }
+        public long MasterID { get; set; }
+        public long RequestID { get; set; }
     
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<Request> Requests { get; set; }
+        public virtual Request Request { get; set; }
+        public virtual User Master { get; set; }
     }
 }
