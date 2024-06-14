@@ -129,6 +129,7 @@
     </Page>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="PagesControllers\AuthorizePageController.cs" />
     <Compile Include="Pages\AuthorizePage.xaml.cs">
       <DependentUpon>AuthorizePage.xaml</DependentUpon>
     </Compile>
