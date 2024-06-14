@@ -13,6 +13,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 using WpfAppKondi.Model;
+using WpfAppKondi.PagesControllers;
 
 namespace WpfAppKondi.Pages
 {
@@ -21,6 +22,8 @@ namespace WpfAppKondi.Pages
     /// </summary>
     public partial class AuthorizePage : Page
     {
+        private AuthorizePageController _authorizePageController;
+
         public AuthorizePage()
         {
             InitializeComponent();
@@ -28,46 +31,30 @@ namespace WpfAppKondi.Pages
 
         private void ButtonLogin_Click(object sender, RoutedEventArgs e)
         {
-            string login = TextBoxLogin.Text;
-            string password = TextBoxPassword.Text;
-
-            if (login == "")
+            try
             {
-                //MessageBox.Show(  "Ошибка. Логин не заполнен.");
-                MessageBox.Show("Ошибка. Логин не заполнен.", "Ошибка", MessageBoxButton.OK, MessageBoxImage.Error);
-                return;
+                string login = TextBoxLogin.Text;
+                string password = TextBoxPassword.Text;
+
+                GlobalVariables.User = _authorizePageController.FindUserByLoginAndPassword(login, password);
+
+                switch (GlobalVariables.User.UserTypeId)
+                {
+                    case 2:
+                        GlobalVariables.Frame.Navigate(new SpecialistMainPage());
+                        break;
+                    case 3:
+                        GlobalVariables.Frame.Navigate(new CustomerMainPage());
+                        break;
+                    case 4:
+                        GlobalVariables.Frame.Navigate(new CustomerMainPage());
+                        break;
+
+                }
             }
-
-            if (password == "")
+            catch (Exception ex)
             {
-       
-                MessageBox.Show("Ошибка. Пароль не заполнен.", "Ошибка", MessageBoxButton.OK, MessageBoxImage.Error);
-                return;
-            }
-
-            User user = DbConnector.KondiEntities.Users.FirstOrDefault(u=>u.Login == login && u.Password == password);
-
-            if (user == null)
-            {
-                MessageBox.Show("Ошибка. Пользователь с такоей парой логин и пароль не найден.", "Ошибка", MessageBoxButton.OK, MessageBoxImage.Error);
-    
-                return;
-            }
-
-            GlobalVariables.User = user;
-
-            switch (user.UserTypeId)
-            {
-                case 2:
-                    GlobalVariables.Frame.Navigate(new SpecialistMainPage());
-                    break;
-                case 3:
-                    GlobalVariables.Frame.Navigate(new CustomerMainPage());
-                    break;
-                case 4:
-                    GlobalVariables.Frame.Navigate(new CustomerMainPage());
-                    break;
-
+                MessageBox.Show(ex.Message, "Ошибка", MessageBoxButton.OK, MessageBoxImage.Error);
             }
 
         }
