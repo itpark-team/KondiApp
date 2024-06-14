@@ -3,36 +3,20 @@
   "WorkspaceRootPath": "C:\\Users\\smyslov\\source\\repos\\WpfAppKondi\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{9929C574-B68B-47F1-981E-803FB90EF6DF}|WpfAppKondi\\WpfAppKondi.csproj|c:\\users\\smyslov\\source\\repos\\wpfappkondi\\wpfappkondi\\model\\dbconnector.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{9929C574-B68B-47F1-981E-803FB90EF6DF}|WpfAppKondi\\WpfAppKondi.csproj|solutionrelative:wpfappkondi\\model\\dbconnector.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{62840906-CCBD-4299-93E1-535055D44664}|WpfAppKondiUnitTestProject\\WpfAppKondiUnitTestProject.csproj|c:\\users\\smyslov\\source\\repos\\wpfappkondi\\wpfappkondiunittestproject\\authorizepagecontrollerunittest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{62840906-CCBD-4299-93E1-535055D44664}|WpfAppKondiUnitTestProject\\WpfAppKondiUnitTestProject.csproj|solutionrelative:wpfappkondiunittestproject\\authorizepagecontrollerunittest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{9929C574-B68B-47F1-981E-803FB90EF6DF}|WpfAppKondi\\WpfAppKondi.csproj|c:\\users\\smyslov\\source\\repos\\wpfappkondi\\wpfappkondi\\model\\kondimodel.context.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{9929C574-B68B-47F1-981E-803FB90EF6DF}|WpfAppKondi\\WpfAppKondi.csproj|solutionrelative:wpfappkondi\\model\\kondimodel.context.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{9929C574-B68B-47F1-981E-803FB90EF6DF}|WpfAppKondi\\WpfAppKondi.csproj|c:\\users\\smyslov\\source\\repos\\wpfappkondi\\wpfappkondi\\model\\kondimodel.tt||{8B382828-6202-11D1-8870-0000F87579D2}",
-      "RelativeMoniker": "D:0:0:{9929C574-B68B-47F1-981E-803FB90EF6DF}|WpfAppKondi\\WpfAppKondi.csproj|solutionrelative:wpfappkondi\\model\\kondimodel.tt||{8B382828-6202-11D1-8870-0000F87579D2}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{9929C574-B68B-47F1-981E-803FB90EF6DF}|WpfAppKondi\\WpfAppKondi.csproj|c:\\users\\smyslov\\source\\repos\\wpfappkondi\\wpfappkondi\\app.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}",
-      "RelativeMoniker": "D:0:0:{9929C574-B68B-47F1-981E-803FB90EF6DF}|WpfAppKondi\\WpfAppKondi.csproj|solutionrelative:wpfappkondi\\app.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{9929C574-B68B-47F1-981E-803FB90EF6DF}|WpfAppKondi\\WpfAppKondi.csproj|c:\\users\\smyslov\\source\\repos\\wpfappkondi\\wpfappkondi\\packages.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}",
-      "RelativeMoniker": "D:0:0:{9929C574-B68B-47F1-981E-803FB90EF6DF}|WpfAppKondi\\WpfAppKondi.csproj|solutionrelative:wpfappkondi\\packages.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{9929C574-B68B-47F1-981E-803FB90EF6DF}|WpfAppKondi\\WpfAppKondi.csproj|c:\\users\\smyslov\\source\\repos\\wpfappkondi\\wpfappkondi\\pagescontrollers\\authorizepagecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{9929C574-B68B-47F1-981E-803FB90EF6DF}|WpfAppKondi\\WpfAppKondi.csproj|solutionrelative:wpfappkondi\\pagescontrollers\\authorizepagecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{9929C574-B68B-47F1-981E-803FB90EF6DF}|WpfAppKondi\\WpfAppKondi.csproj|c:\\users\\smyslov\\source\\repos\\wpfappkondi\\wpfappkondi\\pages\\authorizepage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{9929C574-B68B-47F1-981E-803FB90EF6DF}|WpfAppKondi\\WpfAppKondi.csproj|solutionrelative:wpfappkondi\\pages\\authorizepage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9929C574-B68B-47F1-981E-803FB90EF6DF}|WpfAppKondi\\WpfAppKondi.csproj|c:\\users\\smyslov\\source\\repos\\wpfappkondi\\wpfappkondi\\model\\dbconnector.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9929C574-B68B-47F1-981E-803FB90EF6DF}|WpfAppKondi\\WpfAppKondi.csproj|solutionrelative:wpfappkondi\\model\\dbconnector.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9929C574-B68B-47F1-981E-803FB90EF6DF}|WpfAppKondi\\WpfAppKondi.csproj|c:\\users\\smyslov\\source\\repos\\wpfappkondi\\wpfappkondi\\pages\\authorizepage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{9929C574-B68B-47F1-981E-803FB90EF6DF}|WpfAppKondi\\WpfAppKondi.csproj|solutionrelative:wpfappkondi\\pages\\authorizepage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     }
   ],
   "DocumentGroupContainers": [
@@ -42,110 +26,57 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 5,
+          "SelectedChildIndex": 3,
           "Children": [
             {
               "$type": "Document",
               "DocumentIndex": 2,
-              "Title": "KondiModel.Context.cs",
-              "DocumentMoniker": "C:\\Users\\smyslov\\source\\repos\\WpfAppKondi\\WpfAppKondi\\Model\\KondiModel.Context.cs",
-              "RelativeDocumentMoniker": "WpfAppKondi\\Model\\KondiModel.Context.cs",
-              "ToolTip": "C:\\Users\\smyslov\\source\\repos\\WpfAppKondi\\WpfAppKondi\\Model\\KondiModel.Context.cs",
-              "RelativeToolTip": "WpfAppKondi\\Model\\KondiModel.Context.cs",
-              "ViewState": "AQIAAAoAAABgNDMzMzMTwAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-14T09:49:06.624Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "KondiModel.tt",
-              "DocumentMoniker": "C:\\Users\\smyslov\\source\\repos\\WpfAppKondi\\WpfAppKondi\\Model\\KondiModel.tt",
-              "RelativeDocumentMoniker": "WpfAppKondi\\Model\\KondiModel.tt",
-              "ToolTip": "C:\\Users\\smyslov\\source\\repos\\WpfAppKondi\\WpfAppKondi\\Model\\KondiModel.tt",
-              "RelativeToolTip": "WpfAppKondi\\Model\\KondiModel.tt",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003109|",
-              "WhenOpened": "2024-06-14T09:49:02.363Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "App.config",
-              "DocumentMoniker": "C:\\Users\\smyslov\\source\\repos\\WpfAppKondi\\WpfAppKondi\\App.config",
-              "RelativeDocumentMoniker": "WpfAppKondi\\App.config",
-              "ToolTip": "C:\\Users\\smyslov\\source\\repos\\WpfAppKondi\\WpfAppKondi\\App.config",
-              "RelativeToolTip": "WpfAppKondi\\App.config",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABIAAAAQAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000601|",
-              "WhenOpened": "2024-06-14T09:47:31.105Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "packages.config",
-              "DocumentMoniker": "C:\\Users\\smyslov\\source\\repos\\WpfAppKondi\\WpfAppKondi\\packages.config",
-              "RelativeDocumentMoniker": "WpfAppKondi\\packages.config",
-              "ToolTip": "C:\\Users\\smyslov\\source\\repos\\WpfAppKondi\\WpfAppKondi\\packages.config",
-              "RelativeToolTip": "WpfAppKondi\\packages.config",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000601|",
-              "WhenOpened": "2024-06-14T09:47:28.327Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "AuthorizePageControllerUnitTest.cs",
-              "DocumentMoniker": "C:\\Users\\smyslov\\source\\repos\\WpfAppKondi\\WpfAppKondiUnitTestProject\\AuthorizePageControllerUnitTest.cs",
-              "RelativeDocumentMoniker": "WpfAppKondiUnitTestProject\\AuthorizePageControllerUnitTest.cs",
-              "ToolTip": "C:\\Users\\smyslov\\source\\repos\\WpfAppKondi\\WpfAppKondiUnitTestProject\\AuthorizePageControllerUnitTest.cs",
-              "RelativeToolTip": "WpfAppKondiUnitTestProject\\AuthorizePageControllerUnitTest.cs",
-              "ViewState": "AQIAACYAAAAAAAAAAAAgwDEAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-14T09:35:19.125Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
               "Title": "DbConnector.cs",
               "DocumentMoniker": "C:\\Users\\smyslov\\source\\repos\\WpfAppKondi\\WpfAppKondi\\Model\\DbConnector.cs",
               "RelativeDocumentMoniker": "WpfAppKondi\\Model\\DbConnector.cs",
               "ToolTip": "C:\\Users\\smyslov\\source\\repos\\WpfAppKondi\\WpfAppKondi\\Model\\DbConnector.cs",
               "RelativeToolTip": "WpfAppKondi\\Model\\DbConnector.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAwAAAABAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAoAAABNAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-14T09:27:19.661Z",
+              "WhenOpened": "2024-06-14T10:22:30.407Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 1,
               "Title": "AuthorizePage.xaml.cs",
               "DocumentMoniker": "C:\\Users\\smyslov\\source\\repos\\WpfAppKondi\\WpfAppKondi\\Pages\\AuthorizePage.xaml.cs",
               "RelativeDocumentMoniker": "WpfAppKondi\\Pages\\AuthorizePage.xaml.cs",
               "ToolTip": "C:\\Users\\smyslov\\source\\repos\\WpfAppKondi\\WpfAppKondi\\Pages\\AuthorizePage.xaml.cs",
               "RelativeToolTip": "WpfAppKondi\\Pages\\AuthorizePage.xaml.cs",
-              "ViewState": "AQIAABwAAACA+f////8lwDUAAAANAAAA",
+              "ViewState": "AQIAACEAAABAMzMzMzM9wDcAAAANAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-14T09:20:53.929Z",
+              "WhenOpened": "2024-06-14T10:20:44.665Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 3,
+              "Title": "AuthorizePage.xaml",
+              "DocumentMoniker": "C:\\Users\\smyslov\\source\\repos\\WpfAppKondi\\WpfAppKondi\\Pages\\AuthorizePage.xaml",
+              "RelativeDocumentMoniker": "WpfAppKondi\\Pages\\AuthorizePage.xaml",
+              "ToolTip": "C:\\Users\\smyslov\\source\\repos\\WpfAppKondi\\WpfAppKondi\\Pages\\AuthorizePage.xaml",
+              "RelativeToolTip": "WpfAppKondi\\Pages\\AuthorizePage.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2024-06-14T10:20:38.697Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
               "Title": "AuthorizePageController.cs",
               "DocumentMoniker": "C:\\Users\\smyslov\\source\\repos\\WpfAppKondi\\WpfAppKondi\\PagesControllers\\AuthorizePageController.cs",
               "RelativeDocumentMoniker": "WpfAppKondi\\PagesControllers\\AuthorizePageController.cs",
               "ToolTip": "C:\\Users\\smyslov\\source\\repos\\WpfAppKondi\\WpfAppKondi\\PagesControllers\\AuthorizePageController.cs",
               "RelativeToolTip": "WpfAppKondi\\PagesControllers\\AuthorizePageController.cs",
-              "ViewState": "AQIAABgAAABAmpmZmZktwCcAAAANAAAA",
+              "ViewState": "AQIAABYAAACAZmZmZmYmwCEAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-14T09:20:45.638Z",
+              "WhenOpened": "2024-06-14T10:11:51.659Z",
               "EditorCaption": ""
             }
           ]

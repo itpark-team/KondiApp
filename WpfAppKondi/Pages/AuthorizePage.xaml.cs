@@ -27,6 +27,8 @@ namespace WpfAppKondi.Pages
         public AuthorizePage()
         {
             InitializeComponent();
+
+            _authorizePageController = new AuthorizePageController();
         }
 
         private void ButtonLogin_Click(object sender, RoutedEventArgs e)

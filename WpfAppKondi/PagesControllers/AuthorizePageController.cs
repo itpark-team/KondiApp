@@ -22,17 +22,15 @@ namespace WpfAppKondi.PagesControllers
                 throw new Exception("Ошибка. Пароль не заполнен.");
             }
 
-
-            User user = DbConnector.KondiEntities.Users.FirstOrDefault(u => u.Login == login && u.Password == password);
-
-            //User user;
-            //try
-            //{
-            //    user = DbConnector.KondiEntities.Users.FirstOrDefault(u => u.Login == login && u.Password == password);
-            //} catch
-            //{
-            //    throw new Exception("Ошибка соединения с БД");
-            //}
+            User user;
+            try
+            {
+                user = DbConnector.KondiEntities.Users.FirstOrDefault(u => u.Login == login && u.Password == password);
+            } 
+            catch(Exception e)
+            {
+                throw new Exception("Ошибка соединения с БД");
+            }
 
             if (user == null)
             {
