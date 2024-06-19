@@ -10,11 +10,11 @@ none
 false
 DEBUG;TRACE
 C:\Users\smyslov\source\repos\WpfAppKondi\WpfAppKondi\App.xaml
-5382317600
+6-1891538187
 2-1355452957
-22-1573257314
+24330802013
 18-266598945
-MainWindow.xaml;Pages\AuthorizePage.xaml;Pages\CustomerMainPage.xaml;Pages\OperatorMainPage.xaml;Pages\SpecialistMainPage.xaml;
+MainWindow.xaml;Pages\AddNewRequestPage.xaml;Pages\AuthorizePage.xaml;Pages\CustomerMainPage.xaml;Pages\OperatorMainPage.xaml;Pages\SpecialistMainPage.xaml;
 
 True
 

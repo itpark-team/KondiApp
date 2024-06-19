@@ -27,3 +27,5 @@ C:\Users\smyslov\source\repos\WpfAppKondi\WpfAppKondi\obj\Debug\WpfAppKondi.cspr
 C:\Users\smyslov\source\repos\WpfAppKondi\WpfAppKondi\obj\Debug\WpfAppKo.47A1E03F.Up2Date
 C:\Users\smyslov\source\repos\WpfAppKondi\WpfAppKondi\obj\Debug\WpfAppKondi.exe
 C:\Users\smyslov\source\repos\WpfAppKondi\WpfAppKondi\obj\Debug\WpfAppKondi.pdb
+C:\Users\smyslov\source\repos\WpfAppKondi\WpfAppKondi\obj\Debug\Pages\AddNewRequestPage.g.cs
+C:\Users\smyslov\source\repos\WpfAppKondi\WpfAppKondi\obj\Debug\Pages\AddNewRequestPage.baml

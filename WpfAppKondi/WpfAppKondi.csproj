@@ -111,6 +111,10 @@
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Page Include="Pages\AddNewRequestPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Pages\AuthorizePage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -129,7 +133,11 @@
     </Page>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="PagesControllers\AddNewRequestPageController.cs" />
     <Compile Include="PagesControllers\AuthorizePageController.cs" />
+    <Compile Include="Pages\AddNewRequestPage.xaml.cs">
+      <DependentUpon>AddNewRequestPage.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Pages\AuthorizePage.xaml.cs">
       <DependentUpon>AuthorizePage.xaml</DependentUpon>
     </Compile>

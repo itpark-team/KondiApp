@@ -25,12 +25,17 @@ namespace WpfAppKondi.Pages
         {
             InitializeComponent();
 
+            FillGridCustomerRequests();
+        }
+
+        public void FillGridCustomerRequests()
+        {
             this.GridCustomerRequests.ItemsSource = DbConnector.KondiEntities.Requests.Where(r => r.ClientId == GlobalVariables.User.Id).ToList();
         }
 
         private void ButtonAddNewRequest_Click(object sender, RoutedEventArgs e)
         {
-
+            GlobalVariables.Frame.Navigate(new AddNewRequestPage(this));
         }
     }
 }
