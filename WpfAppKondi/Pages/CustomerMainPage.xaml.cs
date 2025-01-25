@@ -26,6 +26,8 @@ namespace WpfAppKondi.Pages
             InitializeComponent();
 
             FillGridCustomerRequests();
+
+            EventPagesAggregator.GridCustomerDataUpdated += FillGridCustomerRequests;
         }
 
         public void FillGridCustomerRequests()
@@ -35,7 +37,8 @@ namespace WpfAppKondi.Pages
 
         private void ButtonAddNewRequest_Click(object sender, RoutedEventArgs e)
         {
-            GlobalVariables.Frame.Navigate(new AddNewRequestPage(this));
+            //GlobalVariables.Frame.Navigate(new AddNewRequestPage(this));
+            GlobalVariables.Frame.Navigate(new AddNewRequestPage());
         }
     }
 }

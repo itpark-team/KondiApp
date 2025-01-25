@@ -24,13 +24,26 @@ namespace WpfAppKondi.Pages
     {
         private AddNewRequestPageController _addNewRequestPageController;
 
-        private CustomerMainPage _customerMainPage;
+        //private CustomerMainPage _customerMainPage;
 
-        public AddNewRequestPage(CustomerMainPage customerMainPage)
+        //public AddNewRequestPage(CustomerMainPage customerMainPage)
+        //{
+        //    InitializeComponent();
+
+        //    _customerMainPage = customerMainPage;
+
+        //    _addNewRequestPageController = new AddNewRequestPageController();
+
+        //    ComboboxClimateTechType.ItemsSource = _addNewRequestPageController.GetAllClimateTechTypes();
+
+        //    ComboboxClimateTechType.DisplayMemberPath = "Name";
+        //    ComboboxClimateTechType.SelectedValuePath = "Id";
+        //    ComboboxClimateTechType.SelectedIndex = 0;
+        //}
+
+        public AddNewRequestPage()
         {
             InitializeComponent();
-
-            _customerMainPage = customerMainPage;
 
             _addNewRequestPageController = new AddNewRequestPageController();
 
@@ -53,7 +66,7 @@ namespace WpfAppKondi.Pages
 
                 MessageBox.Show("Заявка успешно созадана", "Успех", MessageBoxButton.OK, MessageBoxImage.Information);
 
-                _customerMainPage.FillGridCustomerRequests();
+                EventPagesAggregator.NotifyGridCustomerDataUpdated();
             }
             catch (Exception ex)
             {
